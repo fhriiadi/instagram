@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Instagram Dashboard Clone</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    }
+
+    @keyframes spin-border {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+    }
+
+    .story-ring {
+    border: 2px solid transparent;
+      border-radius: 9999px;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(to right, #f43f5e, #f97316) border-box;
+      animation: spin-border 4s linear infinite;
+    }
+
+    .story-ring:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      transition: transform 0.2s;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .dark {
+      background-color: #121212;
+      color: white;
+    }
+
+    .dark .bg-white {
+      background-color: #1e1e1e;
+    }
+
+    .dark .text-gray-900 {
+      color: #f1f1f1;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<div class="flex min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-80 p-6 hidden lg:block bg-gradient-to-b from-white to-gray-100 border-r">
+    <h1 class="text-2xl font-bold mb-10">Instagram</h1>
+    <nav class="space-y-5 text-lg">
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>🏠</span><span>Home</span></a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>🔍</span><span>Search</span></a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>🧭</span><span>Explore</span></a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>🎬</span><span>Reels</span></a>
+      <a href="#" class="flex items-center space-x-3 relative hover:bg-gray-100 px-3 py-2 rounded transition duration-200">
+        <span>✉</span><span>Messages</span>
+        <span class="absolute top-0 right-0 text-xs bg-red-500 text-white px-2 py-0.5 rounded-full ml-2">9+</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>❤</span><span>Notifications</span></a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>➕</span><span>Create</span></a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><img src="https://i.pravatar.cc/24" class="rounded-full"/><span>Profile</span></a>
+      <a href="#" class="flex items-center space-x-3 hover:bg-gray-100 px-3 py-2 rounded transition duration-200"><span>☰</span><span>More</span></a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="flex-1 max-w-3xl mx-auto p-4">
+
+    <!-- Stories -->
+    <div class="flex space-x-4 overflow-x-scroll no-scrollbar py-4 border-b">
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Ansel</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Athalie</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Argantara</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Manda</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Myle</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Rachel</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Fuji</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Nikita</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>jennifer</span>
+      </div>
+      <div class="flex flex-col items-center text-xs">
+        <div class="p-1 story-ring">
+          <img src="https://i.pravatar.cc/60?img=1" class="rounded-full" />
+        </div>
+        <span>Kamari</span>
+      </div>
+      
+    </div>
+
+<div class="mt-6 bg-white border rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+  <!-- Header Post -->
+  <div class="flex items-center p-4">
+    <img src="https://i.pravatar.cc/32?img=5" class="rounded-full w-8 h-8" />
+    <div class="ml-2 font-semibold">lelucon</div>
+    <div class="ml-auto text-sm text-gray-500">13m</div>
+  </div>
+
+  <!-- Gambar Post -->
+  <img src="bahan/WhatsApp Image 2025-05-24 at 06.46.48_1c75e812.jpg" class="w-full" />
+
+  <!-- Aksi: Like, Comment, Share -->
+  <div class="flex items-center space-x-4 px-4 py-2 text-2xl">
+    <button class="icon like-btn">❤️</button>
+    <button class="icon comment-toggle">💬</button>
+    <span class="icon">📤</span>
+  </div>
+
+  <!-- Jumlah Like -->
+  <div class="px-4 text-sm">
+    <span class="font-semibold like-count">1k</span> likes
+  </div>
+
+  <!-- Caption -->
+  <div class="p-4 text-sm">
+    <p><span class="font-semibold">lelucon</span> shik shak shok</p>
+    <p class="text-gray-500 mt-2">2 jam lalu</p>
+  </div>
+
+  <!-- Komentar -->
+  <div class="p-4 text-sm comment-section hidden">
+    <input type="text" class="w-full p-2 border rounded comment-input" placeholder="Add a comment..." />
+    <div class="mt-2 space-y-1 comments-list"></div>
+  </div>
+</div>
+
+<!-- JavaScript untuk interaksi -->
+<script>
+  // Fungsi Like
+  document.querySelectorAll('.like-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const likeCount = btn.closest('.mt-6').querySelector('.like-count');
+      let count = parseInt(likeCount.textContent);
+      count++;
+      likeCount.textContent = count;
+    });
+  });
+
+  // Tampilkan/Sembunyikan kolom komentar
+  document.querySelectorAll('.comment-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const section = btn.closest('.mt-6').querySelector('.comment-section');
+      section.classList.toggle('hidden');
+    });
+  });
+
+  // Menambahkan komentar baru saat tekan Enter
+  document.querySelectorAll('.comment-input').forEach((input) => {
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && input.value.trim() !== '') {
+        const list = input.closest('.comment-section').querySelector('.comments-list');
+        const newComment = document.createElement('p');
+        newComment.innerHTML = `<span class="font-semibold">You:</span> ${input.value.trim()}`;
+        list.appendChild(newComment);
+        input.value = '';
+      }
+    });
+  });
+</script>
+
+<div class="mt-6 bg-white border rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+  <!-- Header Post -->
+  <div class="flex items-center p-4">
+    <img src="https://i.pravatar.cc/32?img=8" class="rounded-full w-8 h-8" />
+    <div class="ml-2 font-semibold">athaliee</div>
+    <div class="ml-auto text-sm text-gray-500">28m</div>
+  </div>
+
+  <!-- Gambar Post -->
+  <img src="bahan/WhatsApp Image 2025-05-24 at 07.09.21_04a05001.jpg" class="w-full" />
+
+  <!-- Aksi: Like, Comment, Share -->
+  <div class="flex items-center space-x-4 px-4 py-2 text-2xl">
+    <button class="icon like-btn">❤️</button>
+    <button class="icon comment-toggle">💬</button>
+    <span class="icon">📤</span>
+  </div>
+
+  <!-- Jumlah Like -->
+  <div class="px-4 text-sm">
+    <span class="font-semibold like-count">2.3k</span> likes
+  </div>
+
+  <!-- Caption -->
+  <div class="p-4 text-sm">
+    <p><span class="font-semibold">athaliee</span> bored ☀️</p>
+    <p class="text-gray-500 mt-2">30 menit lalu</p>
+  </div>
+
+  <!-- Komentar -->
+  <div class="p-4 text-sm comment-section hidden">
+    <input type="text" class="w-full p-2 border rounded comment-input" placeholder="Add a comment..." />
+    <div class="mt-2 space-y-1 comments-list"></div>
+  </div>
+</div>
+</script>
+
+  </main>
+
+  <!-- Right Sidebar -->
+  <aside class="w-80 p-6 hidden xl:block">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <img src="https://i.pravatar.cc/32?img=10" class="rounded-full w-8 h-8" />
+        <div>
+          <p class="font-semibold text-sm">andiniartikaa</p>
+          <p class="text-xs text-gray-500">Switch</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <div class="flex justify-between text-sm mb-2">
+        <p class="text-gray-500 font-semibold">Suggested for you</p>
+        <a href="#" class="text-blue-500 font-medium">See All</a>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=15" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Fuji</p>
+              <p class="text-gray-400 text-xs">Followed by Rachel</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Kamari</p>
+              <p class="text-gray-400 text-xs">Followed by Jennifer + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Jennifer</p>
+              <p class="text-gray-400 text-xs">Followed by Justin + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Rizkyfebian</p>
+              <p class="text-gray-400 text-xs">Followed by Mahalini + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Mahalini</p>
+              <p class="text-gray-400 text-xs">Followed by Selina + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Balikan</p>
+              <p class="text-gray-400 text-xs">Followed by yuk + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>RaffiNagita</p>
+              <p class="text-gray-400 text-xs">Followed by Sule + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-2">
+            <img src="https://i.pravatar.cc/28?img=18" class="rounded-full w-7 h-7"/>
+            <div>
+              <p>Ansel</p>
+              <p class="text-gray-400 text-xs">Followed by Danise + 4 more</p>
+            </div>
+          </div>
+          <a href="#" class="text-blue-500">Follow</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer class="text-xs text-gray-400 text-center p-6">
+  &copy; 2025 Instagram Clone by Andini Artika Ridwan. All rights reserved.
+</footer>
+
+</body>
+</html>
